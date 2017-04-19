@@ -1,0 +1,14 @@
+services:
+    noveo_test.service.user:
+        class: NoveoTestBundle\Service\UserService
+        arguments: ["@fos_user.user_manager", "@validator"]
+
+    noveo_test.service.group:
+        class: NoveoTestBundle\Service\GroupService
+        arguments: ["@fos_user.group_manager", "@validator"]
+
+    noveo_test.listener.exception:
+        class: NoveoTestBundle\Listener\ExceptionListener
+        arguments: ["@jms_serializer"]
+        tags:
+            - { name: kernel.event_listener, event: kernel.exception }

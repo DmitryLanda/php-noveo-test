@@ -1,0 +1,12 @@
+FOS\UserBundle\Model\User:
+    exclusion_policy: ALL
+    properties:
+        id:
+            expose: true
+            groups: ["Registration"]
+        email:
+            expose: true
+            groups: ["Registration"]
+        enabled:
+            expose: true
+            groups: ["Registration"]

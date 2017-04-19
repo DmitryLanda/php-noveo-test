@@ -1,0 +1,7 @@
+noveo_test_users:
+    type: rest
+    resource: NoveoTestBundle\Controller\UsersController
+
+noveo_test_groups:
+    type: rest
+    resource: NoveoTestBundle\Controller\GroupsController

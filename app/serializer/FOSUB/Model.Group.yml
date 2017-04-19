@@ -1,0 +1,9 @@
+FOS\UserBundle\Model\Group:
+    exclusion_policy: ALL
+    properties:
+        id:
+            expose: true
+            groups: ["Registration"]
+        name:
+            expose: true
+            groups: ["Registration"]

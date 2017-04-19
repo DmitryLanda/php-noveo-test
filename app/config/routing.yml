@@ -1,0 +1,2 @@
+noveo_test:
+    resource: "@NoveoTestBundle/Resources/config/routing.yml"
