@@ -50,8 +50,14 @@ class UserService
     public function updateUser(User $user, UpdateUserRequest $data)
     {
         $user->setFirstName($data->firstName)
-            ->setLastName($data->lastName)
-            ->setEmail($data->email);
+            ->setLastName($data->lastName);
+
+        if ($data->email) {
+            $user->setEmail($data->email);
+        }
+        if ($data->password) {
+            $user->setPlainPassword($data->password);
+        }
 
         $errors = $this->validator->validate($user);
         if ($errors->count()) {
