@@ -1,0 +1,9 @@
+NoveoTestBundle\Entity\Group:
+    Group-1:
+        name: first group
+        users: ['@User-1', '@User-2', '@User-3']
+    Group-2:
+        name: second group
+        users: ['@User-1', '@User-4']
+    Group-3:
+        name: empty group

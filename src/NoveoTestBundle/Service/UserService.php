@@ -49,14 +49,20 @@ class UserService
 
     public function updateUser(User $user, UpdateUserRequest $data)
     {
-        $user->setFirstName($data->firstName)
-            ->setLastName($data->lastName);
-
         if ($data->email) {
             $user->setEmail($data->email);
         }
+        if ($data->firstName) {
+            $user->setFirstName($data->firstName);
+        }
+        if ($data->lastName) {
+            $user->setLastName($data->lastName);
+        }
         if ($data->password) {
             $user->setPlainPassword($data->password);
+        }
+        if ($data->enabled !== null) {
+            $user->setEnabled($data->enabled);
         }
 
         $errors = $this->validator->validate($user);

@@ -1,0 +1,40 @@
+NoveoTestBundle\Entity\User:
+    User-1:
+        username: 'user-1\@foo.com'
+        usernameCanonical: 'user-1\@foo.com'
+        email: 'user-1\@foo.com'
+        emailCanonical: 'user-1\@foo.com'
+        enabled: false
+        password: 123qQ
+        firstName: Disabled
+        lastName: User
+        createdAt: '<(new \DateTime("2017-01-01 12:00:00"))>'
+    User-2:
+        username: 'user-2\@foo.com'
+        usernameCanonical: 'user-2\@foo.com'
+        email: 'user-2\@foo.com'
+        emailCanonical: 'user-2\@foo.com'
+        enabled: true
+        password: 123qQ
+        firstName: Enabled
+        lastName: User
+        createdAt: '<(new \DateTime("2017-01-01 12:00:00"))>'
+    User-3:
+        username: 'user-3\@foo.com'
+        usernameCanonical: 'user-3\@foo.com'
+        email: 'user-3\@foo.com'
+        emailCanonical: 'user-3\@foo.com'
+        enabled: true
+        password: 123qQ
+        lastName: Empty First Name
+        createdAt: '<(new \DateTime("2017-01-01 12:00:00"))>'
+
+NoveoTestBundle\Entity\Group:
+    Group-1:
+        name: first group
+        users: ['@User-1', '@User-2']
+    Group-2:
+        name: second group
+        users: ['@User-1']
+    Group-3:
+        name: empty group

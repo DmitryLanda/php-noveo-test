@@ -8,4 +8,14 @@ framework:
     profiler:
         collect: false
 
+doctrine:
+    dbal:
+        driver: pdo_mysql
+        host: localhost
+        port: ~
+        dbname: noveo_test_db
+        user: root
+        password: root
+        charset: UTF8
+
 liip_functional_test: ~

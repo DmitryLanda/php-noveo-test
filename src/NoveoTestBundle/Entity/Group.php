@@ -31,7 +31,7 @@ class Group extends BaseGroup
      */
     private $users;
 
-    public function __construct($name, $roles = array())
+    public function __construct($name = null, $roles = array())
     {
         parent::__construct($name, $roles = array());
         $this->users = new ArrayCollection();
