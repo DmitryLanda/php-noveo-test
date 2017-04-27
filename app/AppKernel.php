@@ -19,13 +19,13 @@ class AppKernel extends Kernel
             new NoveoTestBundle\NoveoTestBundle(),
         ];
 
-        if ('dev' === $this->getEnvironment()) {
+        if (in_array($this->getEnvironment(), ['test', 'dev'])) {
             $bundles[] = new Symfony\Bundle\DebugBundle\DebugBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
+            $bundles[] = new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle();
         }
         if ('test' === $this->getEnvironment()) {
             $bundles[] = new Liip\FunctionalTestBundle\LiipFunctionalTestBundle();
-            $bundles[] = new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle();
         }
 
         return $bundles;

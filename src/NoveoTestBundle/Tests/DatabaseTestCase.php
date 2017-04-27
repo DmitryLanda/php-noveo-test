@@ -31,11 +31,6 @@ class DatabaseTestCase extends WebTestCase
         shell_exec(sprintf('php %s/console doctrine:fixtures:load -n -e=test', __DIR__ . '/../../../bin'));
     }
 
-    public function makeClient($authentication = false, array $params = array())
-    {
-        return parent::makeClient($authentication, ['HTTP_HOST' => 'noveo-test']);
-    }
-
     public function assertJsonEquals($expectedJson, $actualJson, $skip = [])
     {
         $expected = json_decode($expectedJson, true);
