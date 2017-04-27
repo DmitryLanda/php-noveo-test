@@ -4,6 +4,9 @@ namespace NoveoTestBundle\Tests\Controller;
 
 use NoveoTestBundle\Tests\DatabaseTestCase;
 
+/**
+ * @group database
+ */
 class UsersControllerTest extends DatabaseTestCase
 {
     public function testGetUser()
@@ -217,7 +220,6 @@ class UsersControllerTest extends DatabaseTestCase
     }
 
     /**
-     * @group current
      * @resetDatabase
      * @dataProvider patchSuccessfulDataProvider
      * @param int $id

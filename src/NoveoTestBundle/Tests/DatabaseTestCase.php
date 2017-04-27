@@ -19,9 +19,6 @@ class DatabaseTestCase extends WebTestCase
             shell_exec(sprintf('php %s/console doctrine:schema:drop --force -e=test', __DIR__ . '/../../../bin'));
             shell_exec(sprintf('php %s/console doctrine:schema:update --force -e=test', __DIR__ . '/../../../bin'));
             shell_exec(sprintf('php %s/console doctrine:fixtures:load -n -e=test', __DIR__ . '/../../../bin'));
-//            $this->loadFixtureFiles([
-//                '@NoveoTestBundle/DataFixtures/ORM/fixtures.yml'
-//            ]);
         }
 
         parent::tearDown();

@@ -47,5 +47,7 @@ class GroupService
         }
 
         $this->groupManager->updateGroup($group);
+
+        return $group;
     }
 }
